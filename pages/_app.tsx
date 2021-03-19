@@ -15,7 +15,7 @@ const MyApp: AppPage<Props> = ({ pageProps, Component }) => {
   return (
     <>
       <Head>
-        <title>Partners | Levels </title>
+        <title>Levels - Partners</title>
         <link rel="shortcut icon" href="../static/favicon.ico" />
       </Head>
 
