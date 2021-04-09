@@ -25,7 +25,7 @@ export default function main({ value }: Props): ReactElement {
     circle.text.style.fontWeight = "700";
     circle.text.style.paddingBottom = "3rem";
 
-    circle.animate(value / 100);
+    circle.animate(value / 180);
   }, []);
 
   return <div className="flex items-center w-full h-full" id="average"></div>;

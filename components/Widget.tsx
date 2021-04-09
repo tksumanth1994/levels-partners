@@ -7,7 +7,7 @@ import Bar from "./charts/Bar";
 interface Props {
   span: number;
   title: string;
-  chartType?: string;
+  chartType: string;
   height?: number;
 }
 
@@ -25,10 +25,10 @@ export default function main({
         {title}
       </p>
       <div className={`h-${height || 56}`}>
-        {(chartType === "progressBar" && <ProgressBar value={86} />) ||
-          (chartType === "histogram" && <Histogram value={15} />) ||
-          (chartType === "line" && <Line value={10} />) ||
-          (chartType === "bar" && <Bar value={11} />)}
+        {(chartType === "progressBar" && <ProgressBar value={107} />) ||
+          (chartType === "histogram" && <Histogram />) ||
+          (chartType === "line" && <Line />) ||
+          (chartType === "bar" && <Bar />)}
       </div>
     </div>
   );

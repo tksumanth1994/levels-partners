@@ -1,6 +1,7 @@
 import React, { ReactElement } from "react";
 import Filters from "../components/Filters";
 import Widget from "../components/Widget";
+import { totalUsers } from "../data";
 
 export default function main(): ReactElement {
   const [isAbout, setIsAbout] = React.useState(false);
@@ -16,8 +17,15 @@ export default function main(): ReactElement {
       <nav className="bg-secondary shadow border-b-2 border-primary">
         <div className="max-w-7xl mx-auto px-4 px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <div className="flex items-center">
-              <div className="flex-shrink-0">
+            <div className="flex items-center h-full py-4">
+              <div className="flex-shrink-0 pr-4">
+                <img
+                  className="h-auto w-24"
+                  src="../static/equinox.png"
+                  alt="Equinox"
+                />
+              </div>
+              <div className="flex items-center flex-shrink-0 pl-4 border-l border-white h-full">
                 <img
                   className="h-auto w-24"
                   src="../static/logo.svg"
@@ -68,7 +76,7 @@ export default function main(): ReactElement {
 
       <main className="min-h-screen bg-pattern bg-cover">
         <div className="max-w-7xl mx-auto pt-6 lg:pt-8 px-6 lg:px-8">
-          <Filters />
+          <Filters totalUsers={totalUsers} />
         </div>
         <div className="max-w-7xl mx-auto py-6 lg:py-8 px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8">
@@ -84,13 +92,13 @@ export default function main(): ReactElement {
             />
             <Widget
               span={4}
-              title={"Metabolic Score - Hourly Average"}
+              title={"Hourly Average Metabolic Score"}
               chartType={"line"}
               height={96}
             />
             <Widget
               span={4}
-              title={"Zone Scores"}
+              title={"Hourly Zone Distribution"}
               chartType={"bar"}
               height={96}
             />

@@ -3,29 +3,27 @@ import { Chart, Bar } from "react-chartjs-2";
 import ChartDataLabels from "chartjs-plugin-datalabels";
 
 interface Props {
-  value: number;
+  value?: number;
 }
 
 export default function main({ value }: Props): ReactElement {
-  console.log("🚀 ~ file: Histogram.tsx ~ line 9 ~ main ~ value", value);
-
   const data = {
     labels: [
-      "0 - 10",
-      "10 - 20",
-      "20 - 30",
-      "30 - 40",
-      "40 - 50",
-      "50 - 60",
-      "60 - 70",
-      "70 - 80",
-      "80 - 90",
-      "90 - 100",
+      "30 - 45",
+      "45 - 60",
+      "60 - 75",
+      "75 - 90",
+      "90 - 105",
+      "105 - 120",
+      "120 - 135",
+      "135 - 150",
+      "150 - 165",
+      "165 - 180",
     ],
     datasets: [
       {
         label: "Number of Users",
-        data: [1, 3, 6, 7, 13, 19, 21, 22, 18, 10],
+        data: [4, 7, 17, 30, 33, 36, 35, 30, 25, 13],
         backgroundColor: "#5d7763",
       },
     ],
@@ -39,6 +37,7 @@ export default function main({ value }: Props): ReactElement {
           ticks: {
             beginAtZero: true,
           },
+          max: 10,
         },
       ],
       xAxes: [
