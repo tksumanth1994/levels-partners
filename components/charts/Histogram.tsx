@@ -1,5 +1,6 @@
-import React, { ReactElement, useEffect } from "react";
-import { Chart, Bar } from "react-chartjs-2";
+import { ReactElement, useEffect } from "react";
+import { Bar } from "react-chartjs-2";
+import { Chart } from "chart.js";
 import ChartDataLabels from "chartjs-plugin-datalabels";
 
 export default function main(): ReactElement {
@@ -71,6 +72,7 @@ export default function main(): ReactElement {
   };
 
   useEffect(() => {
+    console.log(Chart);
     Chart.pluginService.register(ChartDataLabels);
   }, []);
 
