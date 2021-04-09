@@ -4,7 +4,7 @@ import Widget from "../components/Widget";
 import { totalUsers } from "../data";
 
 export default function main(): ReactElement {
-  const [isAbout, setIsAbout] = React.useState(false);
+  const [isAbout, setIsAbout] = React.useState(true);
   const showAbout = () => {
     setIsAbout(true);
   };
