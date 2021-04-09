@@ -2,11 +2,7 @@ import React, { ReactElement, useEffect } from "react";
 import { Chart, Bar } from "react-chartjs-2";
 import ChartDataLabels from "chartjs-plugin-datalabels";
 
-interface Props {
-  value?: number;
-}
-
-export default function main({ value }: Props): ReactElement {
+export default function main(): ReactElement {
   const data = {
     labels: [
       "30 - 45",

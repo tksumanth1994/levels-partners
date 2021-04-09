@@ -1,11 +1,7 @@
 import React, { ReactElement } from "react";
 import { Bar } from "react-chartjs-2";
 
-interface Props {
-  value?: number;
-}
-
-export default function main({ value }: Props): ReactElement {
+export default function main(): ReactElement {
   const data = {
     labels: [
       "00:00",
