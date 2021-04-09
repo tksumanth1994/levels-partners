@@ -15,14 +15,18 @@ export default function main({ value }: Props): ReactElement {
       trailColor: "#333",
       trailWidth: 6,
       svgStyle: null,
+      text: {
+        value: value,
+        alignToBottom: true,
+      },
     });
+    circle.text.style.fontFamily = '"TT Hoves", sans-serif';
+    circle.text.style.fontSize = "3rem";
+    circle.text.style.fontWeight = "700";
+    circle.text.style.paddingBottom = "3rem";
 
     circle.animate(value / 100);
   }, []);
 
-  return (
-    <div>
-      <div className="block w-full h-56" id="average"></div>
-    </div>
-  );
+  return <div className="flex items-center w-full h-full" id="average"></div>;
 }

@@ -12,9 +12,12 @@
     "test:all": "yarn lint:fix && yarn type-check"
   },
   "dependencies": {
+    "chart.js": "^2.9.4",
+    "chartjs-plugin-datalabels": "^0.7.0",
     "next": "latest",
     "progressbar.js": "^1.1.0",
     "react": "^16.13.0",
+    "react-chartjs-2": "^2.11.1",
     "react-dom": "^16.13.0",
     "styled-components": "^5.0.0"
   },

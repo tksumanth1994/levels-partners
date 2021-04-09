@@ -1,10 +1,6 @@
 import React, { ReactElement } from "react";
 import Filters from "../components/Filters";
-import Average from "../components/widgets/Average";
-import FrequencyDistribution from "../components/widgets/FrequencyDistribution";
-import HourlyAverage from "../components/widgets/HourlyAverage";
-import RateOfChange from "../components/widgets/RateOfChange";
-import ZoneScores from "../components/widgets/ZoneScores";
+import Widget from "../components/Widget";
 
 export default function main(): ReactElement {
   const [isAbout, setIsAbout] = React.useState(false);
@@ -76,11 +72,28 @@ export default function main(): ReactElement {
         </div>
         <div className="max-w-7xl mx-auto py-6 lg:py-8 px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8">
-            <Average span={1} />
-            <FrequencyDistribution span={3} />
-            <HourlyAverage span={2} />
-            <RateOfChange span={2} />
-            <ZoneScores span={4} />
+            <Widget
+              span={1}
+              title={"Average Metabolic Score"}
+              chartType={"progressBar"}
+            />
+            <Widget
+              span={3}
+              title={"Distribution of Users by Metabolic Scores"}
+              chartType={"histogram"}
+            />
+            <Widget
+              span={4}
+              title={"Metabolic Score - Hourly Average"}
+              chartType={"line"}
+              height={96}
+            />
+            <Widget
+              span={4}
+              title={"Zone Scores"}
+              chartType={"bar"}
+              height={96}
+            />
           </div>
         </div>
       </main>
@@ -134,16 +147,15 @@ export default function main(): ReactElement {
                     </h3>
                     <div className="mt-2">
                       <p className="text-sm text-gray-500">
-                        Levels Partner Dashboard gives the organizations a
-                        higher level of control and overall visibility to their
-                        members&apos; stats and progress making it easier for
-                        them to monitor all their members connected with their
-                        program.
+                        Levels Partner Dashboard gives you a higher level of
+                        control and overall visibility to all your members&apos;
+                        stats & progress, making it easier to monitor all your
+                        members connected with the program.
                       </p>
                       <p className="text-sm text-gray-500 mt-2">
-                        They can can track trends over time, filter through
-                        specific data & monitor all of their members. The data
-                        is updated throughout the day thereby providing a
+                        You can can track trends over time, filter through
+                        specific data & monitor all of the members. The data is
+                        updated throughout the day, thereby providing a
                         real-time update.
                       </p>
                     </div>
